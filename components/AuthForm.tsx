@@ -12,7 +12,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'fire
 
 import { useRouter } from 'next/navigation';
 import { auth } from '@/firebase/client';
-import { signIn } from '@/lib/auth.actions';
+import { signIn, signUp } from '@/lib/auth.actions';
 
 const authFormSchema = (type: FormType) => {
   return z.object({
