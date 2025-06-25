@@ -28,6 +28,7 @@ const page = () => {
         <InterviewCard {...interview} key={interview.id}/>
       ))}
       {/* <p>You haven&apos;t taken any interviews yet</p> */}
+      {/* interview InterviewCard */}
     </div>
   </section>
 
