@@ -1,7 +1,6 @@
 'use server';
 
 import { db, auth } from "@/firebase/admin";
-import { log } from "console";
 import { cookies } from "next/headers";
 
 const ONE_WEEK = 60 * 60 * 24 * 7;
@@ -119,6 +118,12 @@ export async function getCurrentUser(): Promise<User | null> {
         console.log(e);
         return null;
     }
+}
+
+export async function signOut() {
+  const cookieStore = await cookies();
+
+  cookieStore.delete("session");
 }
 
 export async function isAuthenticated() {
